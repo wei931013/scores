@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scores</title>
+</head>
+<body>
+    <h1>會考落點分析</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>編號</th>
+                <th>學校</th>
+                <th>公告名額112</th>
+                <th>公告名額113</th>
+                <th>差額</th>
+                <th>累進推估名次113</th>
+                <th>回報分數112</th>
+                <th>預估分數113</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for score in scores %}
+            <tr>
+                <td>{{ score.編號 }}</td>
+                <td>{{ score.學校 }}</td>
+                <td>{{ score.公告名額112 }}</td>
+                <td>{{ score.公告名額113 }}</td>
+                <td>{{ score.差額 }}</td>
+                <td>{{ score.累進推估名次113 }}</td>
+                <td>{{ score.回報分數112 }}</td>
+                <td>{{ score.預估分數113 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
